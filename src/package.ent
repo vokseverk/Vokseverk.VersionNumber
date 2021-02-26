@@ -1,10 +1,10 @@
-<!ENTITY packageVersion "1.0.0">
+<!ENTITY packageVersion "0.1.7">
 
-<!ENTITY orgDisplayName "ORGANISATION">
-<!ENTITY orgNamespace "organisation">
+<!ENTITY orgDisplayName "Vokseværk">
+<!ENTITY orgNamespace "Vokseverk">
 
-<!ENTITY propertyEditorName "DISPLAY_NAME">
-<!ENTITY propertyEditorAlias "EDITOR_ALIAS">
+<!ENTITY propertyEditorName "Version Number">
+<!ENTITY propertyEditorAlias "VersionNumber">
 
 <!ENTITY packageName "&orgDisplayName; &propertyEditorName;">
 <!ENTITY packageAlias "&orgNamespace;.&propertyEditorAlias;">

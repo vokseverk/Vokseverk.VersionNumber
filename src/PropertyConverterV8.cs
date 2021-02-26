@@ -14,7 +14,7 @@ namespace Vokseverk {
 		
 		public bool IsConverter(IPublishedPropertyType propertyType) {
 			// TODO: Change alias here
-			return propertyType.EditorAlias.Equals("EDITOR_ALIAS");
+			return propertyType.EditorAlias.Equals("Vokseverk.VersionEditor");
 		}
 		
 		public Type GetPropertyValueType(IPublishedPropertyType propertyType) {

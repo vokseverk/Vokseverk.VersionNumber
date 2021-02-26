@@ -1,7 +1,20 @@
-.editor-wrapper-classname {
-	
+.version-editor-wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: baseline;
 }
 
-.editor-wrapper-classname .editor-classname {
-	
+.version-editor-wrapper .version-editor-major,
+.version-editor-wrapper .version-editor-minor,
+.version-editor-wrapper .version-editor-patch {
+	width: 6ch;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.version-editor-wrapper .version-editor-dot {
+	padding: 0 2px;
+	font-size: 2em;
 }
