@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Umbraco.Core;
 using Umbraco.Core.PropertyEditors;
+using Umbraco.Core.Models;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Core.Logging;
 
@@ -21,19 +22,25 @@ namespace Vokseverk {
 				return data;
 			}
 			
-			LogHelper.Info(this.GetType(), "Raw data: " + data.ToString());
-			var version = new VersionNumber(1, 0, 0);
+			bool usePatch = UsePatch(propertyType);
+			var version = new VersionNumber(1, 0, usePatch ? 0 : -1);
 			
 			var source = data.ToString();
 			if (source.DetectIsJson()) {
 				try {
 					var json = JsonConvert.DeserializeObject<JObject>(source);
-					version = new VersionNumber(json["major"], json["minor"], json["patch"]);
+					version = new VersionNumber(json["major"], json["minor"], usePatch ? json["patch"] : -1);
 				}
 				catch { /* Hmm, not JSON after all ... */ }
 			}
 			
 			return version;
+		}
+		
+		private bool UsePatch(PublishedPropertyType propertyType) {
+			var preValues = ApplicationContext.Current.Services.DataTypeService.GetPreValuesCollectionByDataTypeId(propertyType.DataTypeId);
+			PreValue preValue;
+			return preValues.PreValuesAsDictionary.TryGetValue("usePatch", out preValue) && preValue.Value == "1";
 		}
 		
 		public class VersionNumber {
@@ -45,7 +52,7 @@ namespace Vokseverk {
 			
 			public VersionNumber(object major, object minor, object patch) {
 				Major = 1;
-				Minor = -1;
+				Minor = 0;
 				Patch = -1;
 				
 				int maj, min, pat;
@@ -69,10 +76,6 @@ namespace Vokseverk {
 				if (Patch == -1) {
 					versionFormat = "{0}.{1}";
 					return string.Format(versionFormat, Major, Minor);
-				}
-				if (Minor == -1) {
-					versionFormat = "{0}";
-					return string.Format(versionFormat, Major);
 				}
 				
 				return string.Format(versionFormat, Major, Minor, Patch);
