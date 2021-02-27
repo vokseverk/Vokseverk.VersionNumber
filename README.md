@@ -1,27 +1,46 @@
-# Umbraco Property Editor Template
+# Version Number for Umbraco
 
-This is our starter project for an Umbraco Property Editor.
+This property editor for Umbraco v7 & v8 shows two or three "number" inputs
+combined to display a typical version number with major, minor and patch
+digits/parts.
 
-## Process
+The configuration allows for displaying only the major and minor
+or all three, depending on how granular the version your particular document
+type should display.
 
-- After creating a new project from this template, rename the root folder from the
-default "package-template" to something that suits your project
+The releases page has PropertyValueConverters for use in your projects.
 
-- Then find the `src/package.ent` file and change the constants in there
+## Rendering the property
 
-- You may want to change a few things in the `package.xml` and `manifest.xml` files as well
+The raw value is a JSON object with the individual segments, e.g.:
 
-- Look for `TODO`, `EDITOR_NAME` and `EDITOR_ALIAS` in various files and change accordingly
+```json
+{
+  "major": 7,
+  "minor": 15,
+  "patch": 5
+}
+```
 
-- Edit/add/remove files in the `src/` folder and update the files section in the
-`package.xml` file
+Using the PropertyValueConverter you can get either the full version number or
+any of its parts, like this:
 
-- Edit the `PropertyConverterV(7|8).cs` files as well
+```razor
+<dl>
+	<dt>Full version</dt>
+	<dd>@(Model.VersionNumber)</dd>
+	<dt>Major</dt>
+	<dd>@Model.VersionNumber.Major</dd>
+	<dt>Minor</dt>
+	<dd>@Model.VersionNumber.Minor</dd>
+	<dt>Patch</dt>
+	<dd>@Model.VersionNumber.Patch</dd>
+</dl>
+```
 
-- Edit this README to describe your new property editor :)
-
-- Create an entry for your new package on [Our Umbraco][OURPKG]
-
+(If the editor is configured to not use the *Patch* version, the `.Patch`
+property is returned as `-1` and the full version only has the major and minor
+parts.)
 
 ## Developing & Building
 
@@ -37,5 +56,3 @@ alias and/or storage type isn't changed.
 To update the version number, increment the `packageVersion` entity in the
 `src/package.ent` file.
 
-[OURPKG]: https://our.umbraco.com/member/profile/packages/
- 
