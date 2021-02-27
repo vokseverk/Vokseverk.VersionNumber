@@ -1,22 +1,16 @@
 angular.module("umbraco").controller("VersionEditorController", function($scope, $element) {
-	if (!$scope.config) {
-		$scope.config = {
+	if ($scope.model.config == null) {
+		$scope.model.config = {
+			useMinor: true,
 			usePatch: true
 		}
 	}
 	
-	if ($scope.config.usePatch == null) {
-		$scope.config.usePatch = true
-	}
-	
-	if (!$scope.model.value) {
+	if ($scope.model.value == null) {
 		$scope.model.value = {
 			major: 1,
-			minor: 0,
-			patch: ($scope.config.usePatch ? 0 : null)
+			minor: $scope.model.config.useMinor ? 0 : null,
+			patch: ($scope.model.config.useMinor && $scope.model.config.usePatch) ? 0 : null
 		}
 	}
-	
-	// Set the property editor's value...
-	// $scope.model.value = 'Some computed value'
 })
