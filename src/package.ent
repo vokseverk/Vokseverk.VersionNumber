@@ -14,4 +14,4 @@
 
 <!ENTITY packageAuthorURL "https://vokseverk.dk/">
 <!ENTITY packageURL "TODO">
-<!ENTITY packageREADME "TODO">
+<!ENTITY packageREADME "A property editor for adding a version number to a document type, following the major.minor[.patch] pattern.">
