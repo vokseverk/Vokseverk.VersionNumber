@@ -16,22 +16,15 @@
 		
 		<prevalues>
 			<field>
-				<label>Include minor version?</label>
-				<key>useMinor</key>
-				<description>Determines if the version number should include the minor (2nd) digit</description>
-				<view>boolean</view>
-			</field>
-			<field>
 				<label>Include patch version?</label>
 				<key>usePatch</key>
-				<description>Determines if the version number should include the patch (3rd) digit. (Note: This requires the minor version to be enabled)</description>
+				<description>Determines if the version number should include the patch (3rd) digit.</description>
 				<view>boolean</view>
 			</field>
 		</prevalues>
 		
 		<defaultConfig>
-			<useMinor>true</useMinor>
-			<usePatch>false</usePatch>
+			<usePatch>0</usePatch>
 		</defaultConfig>
 
 	</propertyEditor>
