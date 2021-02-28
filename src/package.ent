@@ -13,5 +13,6 @@
 <!ENTITY fileBaseName "propeditor">
 
 <!ENTITY packageAuthorURL "https://vokseverk.dk/">
+<!ENTITY packageIconURL "https://raw.githubusercontent.com/vokseverk/Vokseverk.VersionNumber/main/images/versionnumber-icon.png">
 <!ENTITY packageURL "https://our.umbraco.com/packages/backoffice-extensions/version-number/">
 <!ENTITY packageREADME "A property editor for adding a version number to a document type, following the major.minor[.patch] pattern.">
