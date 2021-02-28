@@ -2,6 +2,6 @@
 	<input ng-model="model.value.major" type="number" min="0" value="{{model.value.major}}" class="version-editor-major" />
 	<span class="version-editor-dot color-grey">.</span>
 	<input ng-model="model.value.minor" type="number" min="0" value="{{model.value.minor}}" class="version-editor-minor" />
-	<span ng-if="model.config.usePatch" class="version-editor-dot color-grey">.</span>
-	<input ng-if="model.config.usePatch" ng-model="model.value.patch" type="number" min="0" value="{{model.value.patch}}" class="version-editor-patch" />
+	<span ng-if="model.config.usePatch == 1" class="version-editor-dot color-grey">.</span>
+	<input ng-if="model.config.usePatch == 1" ng-model="model.value.patch" type="number" min="0" value="{{model.value.patch}}" class="version-editor-patch" />
 </div>
