@@ -8,9 +8,21 @@ The configuration allows for displaying only the major and minor
 or all three, depending on how granular the version your particular document
 type should display.
 
-The releases page has PropertyValueConverters for use in your projects.
+The [releases page][RELS] has PropertyValueConverters for use in your projects.
 
-## Rendering the property
+[RELS]: https://github.com/vokseverk/Vokseverk.VersionNumber/releases
+
+## Screenshots
+
+### Editor
+
+![Versionnumber Editor](images/versionnumber-editor.jpg)
+
+### Configuration
+
+![Versionnumber Config](images/versionnumber-config.jpg)
+
+## Rendering
 
 The raw value is a JSON object with the individual segments, e.g.:
 
