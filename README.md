@@ -1,4 +1,4 @@
-<img style="float:right" src="images/versionnumber-icon.png" width="120" height="120" alt="" />
+<img align="right" src="images/versionnumber-icon.png" width="120" height="120" alt="Two number inputs (at 9 and 41) on top of the Vokseværk 'fire-heart' logo" />
 
 # Version Number for Umbraco
 
