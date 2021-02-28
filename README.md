@@ -1,3 +1,5 @@
+<img style="float:right" src="images/versionnumber-icon.png" width="120" height="120" alt="" />
+
 # Version Number for Umbraco
 
 This property editor for Umbraco v7 & v8 shows two or three "number" inputs
