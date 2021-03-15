@@ -1,6 +1,6 @@
-<img align="right" src="images/versionnumber-icon.png" width="120" height="120" alt="Two number inputs (at 9 and 41) on top of the Vokseværk 'fire-heart' logo" />
-
 # Version Number for Umbraco
+
+<img align="right" src="images/vv-versionnumber-icon.png" width="180" height="180" alt="Two number inputs (at 9 and 41) inside a square with the Vokseværk ‘fire-heart’ logo" />
 
 This property editor for Umbraco v7 & v8 shows two or three "number" inputs
 combined to display a typical version number with major, minor and patch
