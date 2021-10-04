@@ -67,6 +67,6 @@ an Umbraco installation by uninstalling the existing version and then
 installing a new build. Existing data-types keep their data as long as their
 alias and/or storage type isn't changed.
 
-To update the version number, increment the `packageVersion` entity in the
-`src/package.ent` file.
+To update the version number of the package files, increment the
+`packageVersion` entity in the `src/package.ent` file.
 
