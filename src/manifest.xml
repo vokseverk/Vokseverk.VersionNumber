@@ -13,16 +13,16 @@
 			<valueType>JSON</valueType><!-- STRING,DATETIME,TEXT,INT,JSON -->
 			<view>&fileBaseName;.view.html</view>
 		</editor>
-		
+
 		<prevalues>
 			<field>
-				<label>Include patch version?</label>
+				<label>Include revision?</label>
 				<key>usePatch</key>
-				<description>Determines if the version number should include the patch (3rd) digit.</description>
+				<description>Determines if the version number should include the revision (3rd) digit.</description>
 				<view>boolean</view>
 			</field>
 		</prevalues>
-		
+
 		<defaultConfig>
 			<usePatch>0</usePatch>
 		</defaultConfig>

@@ -2,17 +2,16 @@
 
 <img align="right" src="images/vv-versionnumber-icon.png" width="180" height="180" alt="Two number inputs (at 9 and 41) inside a square with the Vokseværk ‘fire-heart’ logo" />
 
-This property editor for Umbraco v7 & v8 shows two or three "number" inputs
-combined to display a typical version number with major, minor and patch
+This property editor for Umbraco v10 shows two or three "number" inputs
+combined to display a typical version number with major, minor and revision
 digits/parts.
 
 The configuration allows for displaying only the major and minor
 or all three, depending on how granular the version your particular document
 type should display.
 
-The [releases page][RELS] has PropertyValueConverters for use in your projects.
+The included `PropertyValueConverter` makes sure to return the value as a `System.Version`.
 
-[RELS]: https://github.com/vokseverk/Vokseverk.VersionNumber/releases
 
 ## Screenshots
 
@@ -32,11 +31,11 @@ The raw value is a JSON object with the individual segments, e.g.:
 {
   "major": 7,
   "minor": 15,
-  "patch": 5
+  "revision": 5
 }
 ```
 
-Using the PropertyValueConverter you can get either the full version number or
+Using the `PropertyValueConverter` you can get either the full version number or
 any of its parts, like this:
 
 ```razor
@@ -47,26 +46,17 @@ any of its parts, like this:
 	<dd>@Model.VersionNumber.Major</dd>
 	<dt>Minor</dt>
 	<dd>@Model.VersionNumber.Minor</dd>
-	<dt>Patch</dt>
-	<dd>@Model.VersionNumber.Patch</dd>
+	<dt>Revision</dt>
+	<dd>@Model.VersionNumber.Revision</dd>
 </dl>
 ```
 
-(If the editor is configured to not use the *Patch* version, the `.Patch`
+(If the editor is configured to not use the *Revision* version, the `.Revision`
 property is returned as `-1` and the full version only has the major and minor
 parts.)
 
 ## Developing & Building
 
-On macOS you can run the `build.sh` script from the terminal, which will
-build a ZIP file in the `dist` folder that is installable from
-Umbraco 8's _Packages_ section or Umbraco 7's _Developer > Packages_ section.
-
-The build script versions the files so it's easier to test the package inside
-an Umbraco installation by uninstalling the existing version and then
-installing a new build. Existing data-types keep their data as long as their
-alias and/or storage type isn't changed.
-
-To update the version number of the package files, increment the
-`packageVersion` entity in the `src/package.ent` file.
+On macOS you can run the `nuget-build.sh` script from the terminal, which will
+build a .nupkg file in the `dist` folder.
 

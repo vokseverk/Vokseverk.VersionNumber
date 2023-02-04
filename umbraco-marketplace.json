@@ -1,0 +1,16 @@
+{
+	"AuthorDetails": {
+		"Name": "Chriztian Steinmeier",
+		"ImageUrl": "https://github.com/greystate.png",
+		"Description": "Frontend & Umbraco Developer @ Vokseværk in Denmark. 6× Umbraco MVP.",
+		"Url": "https://greystate.dk/who/"
+	},
+	"Category": "Editor Tools",
+	"Screenshots": [
+		{
+			"ImageUrl": "https://raw.githubusercontent.com/vokseverk/Vokseverk.VersionNumber/main/images/versionnumber-editor.jpg",
+			"Caption": "Editor Screen with 2 instances of the Version Number editor"
+		}
+	],
+	"Title": "Version Number Editor"
+}
