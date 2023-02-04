@@ -35,7 +35,7 @@ The raw value is a JSON object with the individual segments, e.g.:
 }
 ```
 
-Using the `PropertyValueConverter` you can get either the full version number or
+Using the `PropertyValueConverter` you get either the full version number or
 any of its parts, like this:
 
 ```razor
@@ -47,11 +47,11 @@ any of its parts, like this:
 	<dt>Minor</dt>
 	<dd>@Model.VersionNumber.Minor</dd>
 	<dt>Revision</dt>
-	<dd>@Model.VersionNumber.Revision</dd>
+	<dd>@Model.VersionNumber.Build</dd>
 </dl>
 ```
 
-(If the editor is configured to not use the *Revision* version, the `.Revision`
+(If the editor is configured to not use the *Revision* number, the `.Build`
 property is returned as `-1` and the full version only has the major and minor
 parts.)
 
