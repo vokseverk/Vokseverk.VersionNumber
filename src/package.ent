@@ -15,7 +15,7 @@
 <!ENTITY packageREADME "A property editor that shows two or three 'number' inputs combined to display a typical version number with major, minor and build digits/parts.">
 <!ENTITY packageRepoURL "https://github.com/vokseverk/Vokseverk.VersionNumber">
 <!ENTITY packageTags "umbraco versionnumber version property-editor umbraco-marketplace">
-<!ENTITY packageDESC "A property editor for Umbracio that shows two or three 'number' inputs combined to display a typical version number with major, minor and build digits/parts.">
+<!ENTITY packageDESC "A property editor for Umbraco that shows two or three 'number' inputs combined to display a typical version number with major, minor and build digits/parts.">
 
 
 <!ENTITY orgDisplayName "Vokseværk">
