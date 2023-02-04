@@ -4,12 +4,12 @@ angular.module("umbraco").controller("VersionEditorController", function($scope,
 			usePatch: 1
 		}
 	}
-	
+
 	if (!$scope.model.value) {
 		$scope.model.value = {
 			major: 1,
 			minor: 0,
-			patch: ($scope.model.config.usePatch == 1) ? 0 : null
+			build: ($scope.model.config.usePatch == 1) ? 0 : null
 		}
 	} else if (typeof($scope.model.value) == "string") {
 		var value = $scope.model.value
@@ -19,11 +19,11 @@ angular.module("umbraco").controller("VersionEditorController", function($scope,
 		if (matches != null && matches.length > 1) {
 			var maj = matches[1]
 			var min = matches[2] || 0
-			var pat = usePatch ? (matches[3] || 0) : null
+			var rev = usePatch ? (matches[3] || 0) : null
 			$scope.model.value = {
 				major: maj,
 				minor: min,
-				patch: pat
+				build: rev
 			}
 		}
 	}

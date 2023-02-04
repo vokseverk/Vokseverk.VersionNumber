@@ -1,4 +1,22 @@
 <!ENTITY packageVersion "1.1.0">
+<!ENTITY packageVersionV9 "2.0.0">
+<!ENTITY packageVersionV10 "3.0.0">
+<!ENTITY packageVersionV11 "4.0.0">
+
+<!ENTITY packageNamespace "Vokseverk">
+<!ENTITY packageSafeName "VersionNumberEditor">
+<!ENTITY packageName "Vokseværk Version Number Editor">
+<!ENTITY packageAlias "Vokseverk.VersionNumberEditor"><!-- Don't build this from entities! -->
+<!ENTITY packageAuthor "Vokseværk">
+
+<!ENTITY packageAuthorURL "https://vokseverk.dk/">
+<!ENTITY packageIconURL "https://raw.githubusercontent.com/vokseverk/Vokseverk.VersionNumber/main/images/vv-versionnumber-icon.png">
+<!ENTITY packageIconFile "vv-versionnumber-icon.png">
+<!ENTITY packageREADME "A property editor that shows two or three 'number' inputs combined to display a typical version number with major, minor and build digits/parts.">
+<!ENTITY packageRepoURL "https://github.com/vokseverk/Vokseverk.VersionNumber">
+<!ENTITY packageTags "umbraco versionnumber version property-editor umbraco-marketplace">
+<!ENTITY packageDESC "A property editor for Umbracio that shows two or three 'number' inputs combined to display a typical version number with major, minor and build digits/parts.">
+
 
 <!ENTITY orgDisplayName "Vokseværk">
 <!ENTITY orgNamespace "Vokseverk">
@@ -6,13 +24,7 @@
 <!ENTITY propertyEditorName "Version Number">
 <!ENTITY propertyEditorAlias "VersionNumber">
 
-<!ENTITY packageName "&orgDisplayName; &propertyEditorName;">
-<!ENTITY packageAlias "&orgNamespace;.&propertyEditorAlias;">
-<!ENTITY packageAuthor "&orgDisplayName;">
-
 <!ENTITY fileBaseName "propeditor">
 
-<!ENTITY packageAuthorURL "https://vokseverk.dk/">
 <!ENTITY packageIconURL "https://raw.githubusercontent.com/vokseverk/Vokseverk.VersionNumber/main/images/vv-versionnumber-icon.png">
 <!ENTITY packageURL "https://our.umbraco.com/packages/backoffice-extensions/version-number/">
-<!ENTITY packageREADME "A property editor for adding a version number to a document type, following the major.minor[.patch] pattern.">
