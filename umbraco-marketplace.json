@@ -12,5 +12,6 @@
 			"Caption": "Editor Screen with 2 instances of the Version Number editor"
 		}
 	],
-	"Title": "Version Number Editor"
+	"Title": "Version Number Editor",
+	"Description": "A property editor for Umbraco that shows two or three 'number' inputs combined to display a typical version number with major, minor and build digits/parts."
 }
